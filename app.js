@@ -59,6 +59,7 @@ class ProductManager {
             console.log('Error en lectura de  archivo', error)
         }
     }
+    
 
     //--------------------Nuevos Metodos----------------//
     async readFilesMio() {
