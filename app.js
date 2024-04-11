@@ -41,7 +41,7 @@ class ProductManager {
         await this.saveFilesMio(this.products)
 
     }
-    getProduct() {
+    async getProduct() {
         console.log(this.products)
     }
     async getProductById(id) {
@@ -89,7 +89,7 @@ class ProductManager {
                 arrayProducts.splice(index, 1, productUpdate)
                 await this.saveFilesMio(arrayProducts)
             }else{
-                console.log('NO se encontro el producto a actualizar')
+                console.log('No se encontro el producto a actualizar')
             }
 
         } catch (error) {
@@ -110,7 +110,7 @@ class ProductManager {
 }
 
 //Test
-const manager = new ProductManager('./productos.json')
+const manager = new ProductManager('./nuevos_productos.json')
 manager.getProduct()
 
 
@@ -160,7 +160,7 @@ async function testBuscadoPorId(id){
     console.log(encontrado)
 }
 
-testBuscadoPorId(2)
+//testBuscadoPorId(2)
 
 const product5 = {
     id: 1,
@@ -185,3 +185,4 @@ async function testBorrar(id){
 }
 
 //testBorrar(1)
+manager.getProduct()
